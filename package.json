@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "name": "webpack-multiples-entries",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "devDependencies": {
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "webpack-fix-style-only-entries": "^0.5.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js -p -w --progress"
+  },
+  "author": "knivek91",
+  "license": "MIT",
+  "description": ""
+}
