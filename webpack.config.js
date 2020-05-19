@@ -8,8 +8,8 @@ const getAbsolutePath = p => path.resolve(__dirname, p)
 const paths = {
   index: getAbsolutePath("src/index.js"),
   vendor: getAbsolutePath("src/vendor.js"),
-  output: getAbsolutePath("dist"),
-  style: getAbsolutePath("src/index.css")
+  style: getAbsolutePath("src/index.css"),
+  output: getAbsolutePath("dist")
 }
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: paths.output,
-    filename: "[name].js"
+    filename: "[name].min.js"
   },
   module: {
     rules: [
@@ -40,6 +40,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].min.css"
     }),
+    // can be extracted into `optimization`
     new OptimizeCssAssetsPlugin()
   ],
   devtool: false
